@@ -1,0 +1,13 @@
+services:
+  artemis:
+    image: 'apache/activemq-artemis:latest'
+    ports:
+      - '61616'
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=ESA'
+      - 'POSTGRES_PASSWORD=admin'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432'

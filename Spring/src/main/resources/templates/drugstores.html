@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Drugstores</title>
+</head>
+<body>
+<h1>All Drugstores</h1>
+<ul>
+    <th:block th:each="drugstore : ${drugstores}">
+        <li>
+            <span th:text="${drugstore.name}"></span> -
+            <span th:text="${drugstore.address}"></span>
+        </li>
+    </th:block>
+</ul>
+<form method="post" action="/drugstores">
+    <h3>Add a New Drugstore</h3>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <button type="submit">Add Drugstores</button>
+</form>
+</body>
+</html>
