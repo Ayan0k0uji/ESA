@@ -31,8 +31,8 @@ public class BaseRestController<E extends BaseEntity<I>, D extends BaseDto, I>{
     }
 
     @PostMapping
-    public void update(@RequestBody E book) {
-        service.update(book);
+    public void update(@RequestBody E drug) {
+        service.update(drug);
     }
 
     @DeleteMapping("/{id}")

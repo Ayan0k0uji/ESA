@@ -41,7 +41,7 @@ public class DrugDao {
     }
 
     public List<Drug> getDrugsByDrugStoreId(Long drugstoreId) {
-        return entityManager.createQuery("SELECT b FROM Drug b WHERE b.library.id = :libraryId", Drug.class)
+        return entityManager.createQuery("SELECT b FROM Drug b WHERE b.drugstore_id = :drugstoreId", Drug.class)
                 .setParameter("drugstoreId", drugstoreId)
                 .getResultList();
     }
