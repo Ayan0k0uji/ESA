@@ -40,7 +40,7 @@ public class DrugController extends HttpServlet {
             Drug drug = new Drug();
             drug.setTitle(title);
             drug.setDescription(description);
-            drug.setDrugstore(DrugstoreService.getDrugStoreById(drugstoreId));
+            drug.setDrugstore(drugstoreService.getDrugStoreById(drugstoreId));
 
             drugService.createDrug(drug);
 
