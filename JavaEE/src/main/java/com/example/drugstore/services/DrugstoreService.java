@@ -17,7 +17,7 @@ public class DrugstoreService {
         return drugstoreDao.findAll();
     }
 
-    public static Drugstore getDrugStoreById(Long id) {
+    public Drugstore getDrugStoreById(Long id) {
         return drugstoreDao.findById(id);
     }
 
